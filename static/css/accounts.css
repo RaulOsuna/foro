@@ -1,0 +1,17 @@
+body {
+    background-image: url(../img/shattered.png);
+  }
+  
+  .logo {
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .logo a {
+    color: rgba(0,0,0,.9);
+  }
+  
+  .logo a:hover,
+  .logo a:active {
+    text-decoration: none;
+  }

@@ -5,10 +5,10 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import UpdateView, ListView
 from django.utils import timezone
 from django.utils.decorators import method_decorator
-
+from django.views.generic import CreateView
 from .forms import NewTopicForm, PostForm
 from .models import Board, Post, Topic
-
+from django.urls import reverse
 
 class BoardListView(ListView):
     model = Board
@@ -96,7 +96,6 @@ def reply_topic(request, pk, topic_pk):
                 id=post.pk,
                 page=topic.get_page_count()
             )
-
             return redirect(topic_post_url)
     else:
         form = PostForm()
